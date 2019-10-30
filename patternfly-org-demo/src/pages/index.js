@@ -24,7 +24,7 @@ const IndexPage = ({ location }) => (
   <SideNavLayout location={location} hideSideNav>
     <PageSection
       variant={PageSectionVariants.light}
-      className="pf4-c-background-image pf-u-display-flex pf-u-justify-content-center pf-u-align-items-center"
+      className="ws-org pf4-c-background-image pf-u-display-flex pf-u-justify-content-center pf-u-align-items-center"
     >
       <Grid>
         <GridItem sm={12} md={8} mdOffset={2} lg={6} lgOffset={3} className="pf-u-py-2xl pf-u-text-align-center">
@@ -58,7 +58,7 @@ const IndexPage = ({ location }) => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection className="pf4-m-background-white">
+    <PageSection className="ws-org pf4-m-background-white">
       <Grid>
         <GridItem sm={12} md={6} mdOffset={3} className="pf-u-py-2xl pf-u-text-align-center" id="about-patternfly-section">
           <AutoLinkHeader size="h1" className="ws-title pf-u-mb-md">
@@ -71,7 +71,7 @@ const IndexPage = ({ location }) => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection variant={PageSectionVariants.light} className="pf4-c-background-lines">
+    <PageSection variant={PageSectionVariants.light} className="ws-org pf4-c-background-lines">
       <Grid gutter="md" className="pf-u-pb-3xl-on-sm">
         <GridItem sm={12}>
           <Grid>
@@ -155,7 +155,7 @@ const IndexPage = ({ location }) => (
         </GridItem>
       </Grid>
     </PageSection>
-    <PageSection variant={PageSectionVariants.darker} className="pf4-c-background-image-principles">
+    <PageSection variant={PageSectionVariants.darker} className="ws-org pf4-c-background-image-principles">
       <Grid gutter="md" className="pf-u-py-3xl">
         <GridItem sm={12}>
           <Grid className="pf-m-white">
