@@ -43,6 +43,8 @@ const SideNavLayout = ({ children, location, context, hideSideNav = false, parit
     site {
       siteMetadata {
         title
+        description
+        siteUrl
       }
     }
     prInfo: envVars(name: { eq: "PR_INFO" }) {
@@ -99,7 +101,7 @@ const SideNavLayout = ({ children, location, context, hideSideNav = false, parit
     }
   }
   `);
-  const { title } = data.site.siteMetadata;
+  const { title, description, siteUrl } = data.site.siteMetadata;
   const { num, url } = data.prInfo;
   const { topNavItems, sideNav, context: pageSource } = data.sitePlugin.pluginOptions;
   const SideBar = hideSideNav
@@ -182,8 +184,21 @@ const SideNavLayout = ({ children, location, context, hideSideNav = false, parit
   // TODO: SEO
   return (
     <div>
-      <Helmet>
+      <Helmet
+        meta={[
+          {
+            name: 'description',
+            content: description
+          },
+          {
+            name: 'og:url',
+            content: siteUrl
+          }
+        ]}
+      >
         <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:url" content={siteUrl} />
       </Helmet>
       <Banner />
       <Page isManagedSidebar header={Header} sidebar={SideBar}>
